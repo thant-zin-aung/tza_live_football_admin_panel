@@ -1,0 +1,241 @@
+*,html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #151414;
+    color: white;
+}
+
+.app-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+.app-title span {
+    color: yellow;
+}
+.fetch-data-button {
+    margin: 10px auto;
+    width: 120px;
+    height: 47px;
+    background-color: transparent;
+    border: 1px solid yellow;
+    color: yellow;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.fetch-data-button:hover {
+    background-color: yellow;
+    color: black;
+}
+.fetched-label {
+    font-size: 13px;
+    /* display: none; */
+}
+.active-league-body {
+    display: flex !important;
+}
+.active-match-body {
+    display: block !important;
+}
+.league-wrapper {
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+.league-wrapper .header {
+    width: 100%;
+    height: 70px;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.league-wrapper .header .left-wrapper,
+.league-wrapper .header .right-wrapper {
+    display: flex;
+    align-items: center;
+}
+.league-wrapper .header .league-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.league-wrapper .header .league-name-date {
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* .league-wrapper .header .league-name-date .name {
+    line-height: 1.2em;
+} */
+.league-wrapper .header .league-name-date .date {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.league-wrapper .header .right-wrapper .fetch-data-button {
+    width: 120px;
+    height: 47px;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.league-wrapper .header .right-wrapper .down-arrow {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+
+.league-wrapper .body {
+    border: solid #676767;
+    border-width: 0 1px 1px 1px;
+    border-radius: 3px;
+    transition: all 1s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.league-wrapper .body .no-match-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 3px 0;
+    display: none;
+}
+.league-wrapper .match-wrapper {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid #676767;
+    border-width: 1px 0 0 0;
+}
+.league-wrapper .match-wrapper .match-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .league-wrapper .match-wrapper .match-info-wrapper:hover {
+    background-color: #232222;
+} */
+.league-wrapper .match-wrapper .match-info-wrapper .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .info-wrapper .title-wrapper {
+    font-size: 17px;
+    font-weight: bold;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .info-wrapper .done-logo {
+    margin-left: 6px;
+    font-size: 16px;
+    color: #0CD658;
+    display: none;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .info-wrapper .date-wrapper {
+    font-size: 13px;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .button-wrapper .down-arrow {
+    font-size: 13px;
+    margin: 0 10px;
+}
+.league-wrapper .match-wrapper .match-info-wrapper .add-links-button {
+    width: 90px;
+    height: 32px;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.league-wrapper .match-wrapper .add-links-wrapper {
+    margin-top: 10px;
+    border: dashed #676767;
+    border-width: 1px 0 0 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: none;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .voice-language-label {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .link-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .link-wrapper button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .link-wrapper .resolution-wrapper {
+    font-size: 14px;
+    width: 110px;
+    min-width: 110px;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .link-wrapper .link-box {
+    width: 60%;
+    height: 33px;
+    background-color: transparent;
+    border: 1px solid #676767;
+    border-radius: 5px;
+    color: white;
+    padding: 0 10px;
+    font-size: 13px;
+}
+.league-wrapper .match-wrapper .add-links-wrapper .link-wrapper .link-box::selection {
+    background-color: white;
+    color: black;
+}
+
+#copyright {
+    margin-top: 50px;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
